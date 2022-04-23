@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Feb 23 11:53:47 2022
+# Process ID: 10696
+# Current directory: C:/Folders/Vakken/FPGA Programming/pong/pong.runs/synth_1
+# Command line: vivado.exe -log Pong.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Pong.tcl
+# Log file: C:/Folders/Vakken/FPGA Programming/pong/pong.runs/synth_1/Pong.vds
+# Journal file: C:/Folders/Vakken/FPGA Programming/pong/pong.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Pong.tcl -notrace
