@@ -7,7 +7,7 @@ entity sub4bit is
         B : in STD_LOGIC_VECTOR(3 downto 0); 
         Ci : in STD_LOGIC;
         S : out STD_LOGIC_VECTOR(3 downto 0);
-        Sign : out STD_LOGIC
+        Sign : out STD_LOGIC --minteken bij negatieve uitkomst
         );
 end sub4bit;
 
