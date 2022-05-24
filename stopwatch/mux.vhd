@@ -12,9 +12,9 @@ architecture Behavioral of mux is
 
 begin
 
-process (d0,d1,a)
+process (d0,d1,a) --inputs in sensitivity list
 begin
-   case (a) is
+   case (a) is --het is een mux, dat ken je wel
       when '0' =>
         z <= d0;
       when '1' =>
