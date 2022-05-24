@@ -12,15 +12,15 @@ end BCDcounter;
 
 architecture Behavioral of BCDcounter is
     
-    signal sigq : unsigned(3 downto 0) := "0000"; 
+    signal sigq : unsigned(3 downto 0) := "0000"; --unsigned om bewerkingen zoals + 1 te kunnen uitvoeren
 
 begin
 
-process(clk,clr,en)
+process(clk,clr,en) --clock, asynchrone reset en enable in sensitivity list
 begin
-    if clr = '1' then
+    if clr = '1' then --asynchrone reset
         sigq <= "0000";
-    elsif rising_edge(clk) and en = '1' then
+    elsif rising_edge(clk) and en = '1' then --synchroon tellen tot 9 => terug nr 0
         if sigq = 9 then
             sigq <= "0000";
             co <= '0';
@@ -34,6 +34,6 @@ begin
     end if;
 end process;
 
-    q <= std_logic_vector(sigq);
+    q <= std_logic_vector(sigq); --stuur teller naar output, zet unsigned om naar std_logic_vector
 
 end Behavioral;
