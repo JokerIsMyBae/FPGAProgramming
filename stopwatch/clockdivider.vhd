@@ -15,9 +15,9 @@ architecture Behavioral of clockdivider is
 
 begin
 
-process(div)
+process(div) --input in sensitivity list
 begin
-    case (div) is
+    case (div) is --selecteer upper limit van teller, om van frequentie te veranderen
       when "00" =>
          base <= 50000000;
       when "01" =>
@@ -31,17 +31,17 @@ begin
    end case;
 end process;
 
-process(clk)
+process(clk) --sequentieel proces, dus enkel clock (en asynchrone signalen) in sens. list
 begin
-    if rising_edge(clk) then
+    if rising_edge(clk) then --synchrone teller
         i <= i+1;
-        if (i = base) then
+        if (i = base) then --bij upper limit inverteren we de tragere clock en beginnen we terug van 0 te tellen
             i <= 0;
             sigClk <= not sigClk;
         end if;
     end if;
 end process;
 
-    slowclk <= sigClk;
+    slowclk <= sigClk; --vertraagde clock naar output
     
 end Behavioral;
